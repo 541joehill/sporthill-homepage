@@ -9,12 +9,14 @@
             margin:0;
         }
         #fw-hero{
+            position: relative;
             display:flex;
             align-items: center;
             min-height:70vh;
             background: url(./images/hero-bg.jpg)  center;
             background-size: cover;
             background-position: top center;
+            background-position-x: 70%;
             font-family: Roboto;
             text-transform: uppercase;
         }
@@ -61,6 +63,7 @@
             column-gap: 20px;
         }
         .featured{
+            border-radius: 2px;
             width:calc(100% / 3);
             display: flex;
             align-items: center;
@@ -74,6 +77,7 @@
             background-size: 108%; }
         
         .featured a{
+            border-radius: 2px;
             background: rgba(0, 0, 0, .7);
             text-decoration: none;
             min-width: 130px;
@@ -137,6 +141,53 @@
         #hero-right{
                 width:40%;
             }
+        #reviews{
+            max-width: 1280px;
+            width: 90%;
+            height:auto !important;
+            padding-bottom:40px;
+            font-family: Roboto;
+            position: relative;
+            z-index: 99;
+            margin-top:50px;
+        }
+        #reviews h2{
+            font-size:1.5em;
+        }
+        #reviews h3{
+            text-transform: uppercase;
+            margin-top: 10px;
+        }
+        #reviews a{
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 12px;
+        }
+        .review{
+            background:white;
+            height: fit-content;
+            padding: 18px;
+            width: calc(100% / 3);
+            text-align: center;
+            border-radius: 2px;
+            box-shadow: rgba(0, 0, 0, 0.2) 0px 4px 12px;
+            
+        }
+        #reviews-grid{
+            margin-top:20px;
+            display:flex;
+            flex-direction:row;
+            column-gap: 40px;
+        }
+        .review img{
+            max-width:100px;
+        }
+        .reviewer{
+            font-style: italic;
+            font-size: 1em;
+            color:#4e4e4e !important;
+        }
+
         @media only screen and (max-width: 768px)
         {
             #fw-hero{
@@ -205,11 +256,20 @@
                 width: fit-content;
                 margin:auto;
             }
+            #reviews-grid{
+                flex-direction:column;
+            }
+            .review{
+                width: 90%;
+                align-self: center;
+                margin-bottom: 20px;
+            }
         
         }
 
-
     </style>
+
+
     <div id="fw-hero">
         <div id="hero-left">
 
@@ -231,7 +291,7 @@
             <div class="featured f1" onclick="location.href='newurl.html';">
                 <a href="#">
                     <div class="featured-text">
-                        <h2 class="featured-title">Featured<br>Product</h2>
+                        <h2 class="featured-title">Super XC<br>Jacket</h2>
                         <span class="red-border hover-btn" style="color:white;">SHOP NOW</span>
                     </div>
                 </a>
@@ -239,7 +299,7 @@
             <div class="featured f2" onclick="location.href='newurl.html';">
                 <a href="#">
                     <div class="featured-text">
-                        <h2 class="featured-title">Featured<br>Product</h2>
+                        <h2 class="featured-title">3SP XC<br>Top</h2>
                         <span class="red-border hover-btn" style="color:white;">SHOP NOW</span>
                     </div>
                 </a>
@@ -247,7 +307,7 @@
             <div class="featured f3" onclick="location.href='newurl.html';">
                 <a href="#">
                     <div class="featured-text">
-                        <h2 class="featured-title">Featured<br>Product</h2>
+                        <h2 class="featured-title">Lighthouse<br>Jacket</h2>
                         <span class="red-border hover-btn" style="color:white;">SHOP NOW</span>
                     </div>
                 </a>
@@ -277,5 +337,30 @@
                 conditions and Fit for Performance™</p>
                 <a class="red-border hover-btn" href="/mens-apparel/">Shop Mens</a>
         </div>
+    </div>
+    <div style="background:#f7f7f7;margin-top:40px;padding-top:1px;">
+    <div class="container" id="reviews">
+        <h2 style="text-align: center;padding-bottom:20px;">Trusted Since 1985</h2>
+        <div id="reviews-grid">
+            <div class="review">
+                <img src="./images/five-stars.png">
+                <h3>Best of the Best</h3>
+                <p>Epitomizes quality and craftsmanship of SportHill. Well done. <span class="reviewer">- Rob</span></p>
+                <a class="red-border hover-btn" href="/mens-xc-pant/">Mens 3sp Pant</a>
+            </div>
+            <div class="review">
+                <img src="./images/five-stars.png">
+                <h3>Excellent Top</h3>
+                <p>This has become my new favorite running top. The fabric is soft and breathable yet also very warm and surprisingly windproof. It also holds up well in the wash. I reach for it first every time it’s clean! <span class="reviewer">- Allison</span></p>
+                <a class="red-border hover-btn" href="/womens-quanta-crew-top/">Womens Quanta Crew</a>
+            </div>
+            <div class="review">
+                <img src="./images/five-stars.png">
+                <h3>Perfect Fit</h3>
+                <p>Fabric weight is light for comfort around home or during workouts! Will buy a second pair. Highly recommend! <span class="reviewer">- Scott</span></p>
+                <a class="red-border hover-btn" href="/mens-temptech-pant/">Mens TempTech Pant</a>
+            </div>
+        </div> 
+    </div>
     </div>
 </html>
